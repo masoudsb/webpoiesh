@@ -68,6 +68,6 @@ const SelectArrowIcon = styled("div")<{ open: boolean }>(({ open }) => ({
   transition: 'transform 0.3s', // Smooth rotation transition
   transform: open ? 'rotate(180deg)' : 'rotate(0deg)', // Rotate icon based on the open state
   path: {
-    fill: colorPalette.gray[9],
+    fill: colorPalette.gray[1],
   },
 }));
