@@ -13,7 +13,7 @@ export default function MonitorSection() {
       pic: "/image/grid1.png",
       size: 1,
       dir: "column",
-
+      res: "column",
     },
     {
       id: "02",
@@ -33,6 +33,7 @@ export default function MonitorSection() {
       pic: "/image/grid3.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "04",
@@ -42,6 +43,7 @@ export default function MonitorSection() {
       pic: "/image/grid4.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "05",
@@ -51,6 +53,7 @@ export default function MonitorSection() {
       pic: "/image/grid5.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "06",
@@ -61,7 +64,6 @@ export default function MonitorSection() {
       size: 2,
       dir: "row",
       res: "column",
-
     },
     {
       id: "07",
@@ -71,6 +73,7 @@ export default function MonitorSection() {
       pic: "/image/grid7.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "08",
@@ -80,6 +83,7 @@ export default function MonitorSection() {
       pic: "/image/grid8.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "09",
@@ -89,6 +93,7 @@ export default function MonitorSection() {
       pic: "/image/grid9.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "10",
@@ -98,6 +103,7 @@ export default function MonitorSection() {
       pic: "/image/grid10.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "11",
@@ -107,6 +113,7 @@ export default function MonitorSection() {
       pic: "/image/grid11.png",
       size: 1,
       dir: "column",
+      res: "column",
     },
     {
       id: "12",
@@ -117,7 +124,6 @@ export default function MonitorSection() {
       size: 2,
       dir: "row",
       res: "column",
-
     },
   ];
   return (
@@ -127,7 +133,7 @@ export default function MonitorSection() {
       justifyContent={"center"}
       paddingY={"80px"}
       bgcolor={colorPalette.gray[1]}>
-      <Flex padding={"40px 25px"}  textAlign={"center"} gap={"20px"}>
+      <Flex padding={"40px 25px"} textAlign={"center"} gap={"20px"}>
         <Typography
           fontWeight={700}
           color={colorPalette.blue[1]}
@@ -142,7 +148,11 @@ export default function MonitorSection() {
         </Typography>
       </Flex>
 
-      <Grid columns={{mobile:1,tablet:3}} spacing={"32px"} container width={"95%"}>
+      <Grid
+        columns={{ mobile: 1, tablet: 3 }}
+        spacing={"32px"}
+        container
+        width={"95%"}>
         {gridBox.map((item) => (
           <Grid
             key={item.id}
@@ -150,13 +160,15 @@ export default function MonitorSection() {
             bgcolor={colorPalette.turquoise[1]}
             padding={"36px"}
             borderRadius={"6px"}
-            alignContent={"center"}
-            >
+            alignContent={"center"}>
             <Flex
               gap={"20px"}
-              direction={{laptop:item.dir,mobile:item.res}}
-              alignItems={"center"}
-              >
+              sx={{
+                flexDirection:{
+                  laptop: item.dir, mobile: item.res
+                }
+              }}
+              alignItems={"center"}>
               <Flex gap={"20px"}>
                 <Typography
                   fontWeight={700}

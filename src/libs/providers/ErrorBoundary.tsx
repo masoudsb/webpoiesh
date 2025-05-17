@@ -72,13 +72,13 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             minWidth={{ tablet: '600px', laptop: '500px' }}
           >
             <Flex gap={'16px'} direction={'column'} alignItems={{ mobile: 'center', laptop: 'start' }}>
-              <Typography variant='h3' style={{ color: colorPalette.gray[11] }}>
+              <Typography variant='h3' style={{ color: colorPalette.gray[1] }}>
                 به نظر میاد مشکلی پیش اومده!
               </Typography>
-              <Typography variant='body1' style={{ color: colorPalette.gray[11] }}>
+              <Typography variant='body1' style={{ color: colorPalette.gray[1] }}>
                 چند لحظه صبر کن دوباره امتحان کن
               </Typography>
-              <Typography variant='body1' style={{ color: colorPalette.gray[11] }}>
+              <Typography variant='body1' style={{ color: colorPalette.gray[1] }}>
                 اگر خواستی می تونی به صفحه اصلی بری یا از برنامه ریز استفاده کنی
               </Typography>
             </Flex>
@@ -91,7 +91,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <Grid size={1}>
                 <Button
                   sx={{ width: '100%', minWidth: '100px' }}
-                  style={{ color: colorPalette.blue[11] }}
+                  style={{ color: colorPalette.blue[1] }}
                   onClick={() => router.push('/')}
                   variant='primary-ghost'
                 >
@@ -103,7 +103,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <Grid size={1}>
                 <Button
                   sx={{ width: '100%', minWidth: '100px' }}
-                  style={{ color: colorPalette.pink[11] }}
+                  style={{ color: colorPalette.blue[1] }}
                   onClick={() => router.push('/planner?mode=create&plan=destination')}
                   variant='secondary-ghost'
                 >
