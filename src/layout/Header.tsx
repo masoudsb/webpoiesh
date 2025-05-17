@@ -5,6 +5,7 @@ import Image from "next/image";
 import CloudIcon from "@mui/icons-material/Cloud";
 import { colorPalette } from "@/theme";
 import HamMenu from "@/components/hamMenu";
+import Link from "next/link";
 /**
  * props
  * _______________________________________________________________________________
@@ -54,7 +55,7 @@ const Header = () => {
         <HamMenu />
       </Flex>
       <Flex justifySelf={"end"}>
-        <a href="/#">
+        <Link href="/#">
           <Flex direction={"row"} gap={"10px"}>
             <Flex width={"22px"} height={"42px"}>
               <Image
@@ -71,7 +72,7 @@ const Header = () => {
               </Typography>
             </Flex>
           </Flex>
-        </a>
+        </Link>
       </Flex>
       <Flex
         display={{
@@ -97,7 +98,7 @@ const Header = () => {
                 },
               },
             }}>
-            <a href={item.href}>{item.text}</a>
+            <Link href={item.href}>{item.text}</Link>
           </Typography>
         ))}
       </Flex>

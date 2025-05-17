@@ -7,6 +7,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import Link from "next/link";
 
 /**
  * props
@@ -56,7 +57,7 @@ const Footer = () => {
         width={{ tablet: "24%", mobile: "47%" }}
         minWidth={{ tablet: "24%", mobile: "47%" }}
         gap={"15px"}>
-        <a href="/#">
+        <Link href="/#">
           <Flex direction={"row"} gap={"10px"}>
             <Flex width={"22px"} height={"42px"}>
               <Image
@@ -72,7 +73,7 @@ const Footer = () => {
               </Typography>
             </Flex>
           </Flex>
-        </a>
+        </Link>
         <Flex>
           <Typography
             fontSize={"12px"}
@@ -102,7 +103,7 @@ const Footer = () => {
                 },
               },
             }}>
-            <a href={item.href}>{item.text}</a>
+            <Link href={item.href}>{item.text}</Link>
           </Typography>
         ))}
       </Flex>
@@ -123,7 +124,7 @@ const Footer = () => {
               },
             },
           }}>
-          <a href="/#">بایگانی وب سایت</a>
+          <Link href="/#">بایگانی وب سایت</Link>
         </Typography>
         <Typography
           fontSize={"16px"}
@@ -137,7 +138,7 @@ const Footer = () => {
               },
             },
           }}>
-          <a href="/#">وضعیت</a>
+          <Link href="/#">وضعیت</Link>
         </Typography>
         <Typography
           fontSize={"16px"}
@@ -151,7 +152,7 @@ const Footer = () => {
               },
             },
           }}>
-          <a href="/#">بازخورد بدهید</a>
+          <Link href="/#">بازخورد بدهید</Link>
         </Typography>
         <Typography
           fontSize={"16px"}
@@ -165,7 +166,7 @@ const Footer = () => {
               },
             },
           }}>
-          <a href="/#">شرایط خدمات</a>
+          <Link href="/#">شرایط خدمات</Link>
         </Typography>
         <Typography
           fontSize={"16px"}
@@ -179,7 +180,7 @@ const Footer = () => {
               },
             },
           }}>
-          <a href="/#">سیاست حفظ حریم خصوصی</a>
+          <Link href="/#">سیاست حفظ حریم خصوصی</Link>
         </Typography>
       </Flex>
       <Flex
@@ -188,7 +189,7 @@ const Footer = () => {
         width={{ tablet: "24%", mobile: "47%" }}
         minWidth={{ tablet: "24%", mobile: "47%" }}
         gap={"15px"}>
-        <a href="/#">
+        <Link href="/#">
           <Flex direction={"row"} gap={"10px"}>
             <Flex width={"22px"} height={"42px"}>
               <Image
@@ -204,7 +205,7 @@ const Footer = () => {
               </Typography>
             </Flex>
           </Flex>
-        </a>
+        </Link>
         <Flex>
           <Typography
             fontSize={"12px"}
