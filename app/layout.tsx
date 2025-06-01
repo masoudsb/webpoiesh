@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
@@ -12,6 +13,7 @@ import muiTheme from "../src/theme/custom-theme";
 import { Suspense } from "react";
 import { ReactQueryProvider } from "@/libs";
 import "../src/theme/globals.css";
+import PathLayout from "@/components/pathLayout";
 
 export const metadata: Metadata = {
   title: "وب پویش",
@@ -23,6 +25,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html className={sans.variable} lang="fa" dir="rtl">
       <body style={{backgroundColor:"#f2fafc"}}>
@@ -31,7 +34,7 @@ export default function RootLayout({
             <ThemeProvider theme={muiTheme}>
               <CssBaseline />
               <Suspense>
-                <Header />
+                <PathLayout/>
                 <main>{children}</main>
                 <Footer />
               </Suspense>

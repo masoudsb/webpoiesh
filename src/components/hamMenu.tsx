@@ -11,13 +11,12 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
 
-export default function HamMenu() {
+export default function HamMenu({sx}:{sx:string}) {
   const itemList = [
-    { id: 1, text: "موارد استفاده", href: "/#" },
-    { id: 2, text: "قیمت گذاری", href: "/#" },
-    { id: 3, text: "فروش و پشتیبانی", href: "/#" },
-    { id: 4, text: "درباره ما", href: "/#" },
-    { id: 5, text: "بلاگ", href: "/#" },
+  { id: 1, text: "موارد استفاده", href: "/useCase" },
+    { id: 2, text: "قیمت گذاری", href: "/pricing" },
+    { id: 3, text: "درباره ما", href: "/about" },
+    { id: 4, text: "بلاگ", href: "/blog" },
   ];
 
   const [open, setOpen] = React.useState(false);
@@ -26,7 +25,7 @@ export default function HamMenu() {
     <>
       <Button
       
-        sx={{ color: colorPalette.blue[1], zIndex: 1301 ,padding: "0 !important"}}
+        sx={{ color: sx, zIndex: 1301 ,padding: "0 !important"}}
         onClick={() => setOpen(!open)}
       >
         {open ? <CloseIcon /> : <MenuIcon />}

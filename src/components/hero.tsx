@@ -1,4 +1,5 @@
 import { Button, Flex, Typography } from "@/libs/primitives";
+import { colorPalette } from "@/theme";
 import CloudIcon from "@mui/icons-material/Cloud";
 
 export default function Hero() {
@@ -8,14 +9,15 @@ export default function Hero() {
         <Typography
           fontSize={{ xtablet: "64px", mobile: "38px" }}
           lineHeight={{ xtablet: "90px", mobile: "50px" }}
-          fontWeight={"700"}>
+          fontWeight={"700"}
+          color={colorPalette.blue[1]}>
           نظارت بر تغییرات وب سایت
           <br />
           دریافت هشدار، بایگانی تاریخچه کامل
         </Typography>
       </Flex>
       <Flex paddingX={{tablet:"120px",mobile:"10px"}} textAlign={"center"} marginBottom={"36px"}>
-        <Typography fontSize={"18px"} lineHeight={"28px"} fontWeight={"400"}>
+        <Typography fontSize={"18px"} lineHeight={"28px"} fontWeight={"400"} color={colorPalette.gray[3]}>
           یک پلت فرم تشخیص و آرشیو تغییرات وب سایت قدرتمند. سفارشی تنظیم کنید{" "}
           <br />
           معیارهای هشدار، نظارت و پیگیری تغییرات وب سایت، مطلع شوید.

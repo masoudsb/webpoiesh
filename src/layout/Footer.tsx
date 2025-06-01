@@ -20,12 +20,10 @@ const Footer = () => {
    * _______________________________________________________________________________
    */
   const itemList = [
-    { id: 1, text: "موارد استفاده", href: "/#" },
-    { id: 2, text: "قیمت گذاری", href: "/#" },
-    { id: 3, text: "پایگاه دانش", href: "/#" },
-    { id: 4, text: "ارتباط با فروش یا پشتیبانی", href: "/#" },
-    { id: 5, text: "درباره ما", href: "/#" },
-    { id: 6, text: "بلاگ", href: "/#" },
+   { id: 1, text: "موارد استفاده", href: "/useCase" },
+    { id: 2, text: "قیمت گذاری", href: "/pricing" },
+    { id: 3, text: "درباره ما", href: "/about" },
+    { id: 4, text: "بلاگ", href: "/blog" },
   ];
   /**
    * useEffect
@@ -44,7 +42,7 @@ const Footer = () => {
   return (
     <Flex
       direction={"row"}
-      bgcolor={colorPalette.blue[1]}
+      bgcolor={colorPalette.blue[2]}
       width={"100%"}
       alignItems={"start"}
       justifyContent={"start"}
@@ -112,7 +110,7 @@ const Footer = () => {
         width={{ tablet: "24%", mobile: "47%" }}
         minWidth={{ tablet: "24%", mobile: "47%" }}
         gap={"20px"}>
-        <Typography
+        {/* <Typography
           fontSize={"16px"}
           fontWeight={500}
           sx={{
@@ -153,6 +151,20 @@ const Footer = () => {
             },
           }}>
           <Link href="/#">بازخورد بدهید</Link>
+        </Typography> */}
+        <Typography
+          fontSize={"16px"}
+          fontWeight={500}
+          sx={{
+            "&": {
+              color: colorPalette.gray[1],
+              transition: "color 0.3s ease",
+              "&:hover": {
+                color: colorPalette.turquoise[2],
+              },
+            },
+          }}>
+          <Link href="/terms">شرایط خدمات</Link>
         </Typography>
         <Typography
           fontSize={"16px"}
@@ -166,21 +178,7 @@ const Footer = () => {
               },
             },
           }}>
-          <Link href="/#">شرایط خدمات</Link>
-        </Typography>
-        <Typography
-          fontSize={"16px"}
-          fontWeight={500}
-          sx={{
-            "&": {
-              color: colorPalette.gray[1],
-              transition: "color 0.3s ease",
-              "&:hover": {
-                color: colorPalette.turquoise[2],
-              },
-            },
-          }}>
-          <Link href="/#">سیاست حفظ حریم خصوصی</Link>
+          <Link href="/privacy">سیاست حفظ حریم خصوصی</Link>
         </Typography>
       </Flex>
       <Flex

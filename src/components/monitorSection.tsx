@@ -131,8 +131,9 @@ export default function MonitorSection() {
       width={"100%"}
       alignItems={"center"}
       justifyContent={"center"}
+      bgcolor={colorPalette.gray[1]}
       paddingY={"80px"}
-      bgcolor={colorPalette.gray[1]}>
+      >
       <Flex padding={"40px 25px"} textAlign={"center"} gap={"20px"}>
         <Typography
           fontWeight={700}
@@ -164,9 +165,10 @@ export default function MonitorSection() {
             <Flex
               gap={"20px"}
               sx={{
-                flexDirection:{
-                  laptop: item.dir, mobile: item.res
-                }
+                flexDirection: {
+                  laptop: item.dir,
+                  mobile: item.res,
+                },
               }}
               alignItems={"center"}>
               <Flex gap={"20px"}>

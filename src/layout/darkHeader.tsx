@@ -11,7 +11,7 @@ import Link from "next/link";
  * _______________________________________________________________________________
  */
 
-const Header = () => {
+const DarkHeader = () => {
   /**
    * const and variables
    * _______________________________________________________________________________
@@ -39,6 +39,7 @@ const Header = () => {
    */
   return (
     <Flex
+      bgcolor={colorPalette.blue[2]}
       flexDirection="row"
       position="relative"
       padding={{ xtablet: "15px 40px", mobile: "10px 15px" }}
@@ -50,7 +51,7 @@ const Header = () => {
           mobile: "flex",
         }}
         style={{ cursor: "pointer" }}>
-        <HamMenu sx="#29303b"/>
+        <HamMenu sx={"#ffffff"}/>
       </Flex>
       <Flex justifySelf={"end"}>
         <Link href="/">
@@ -59,11 +60,11 @@ const Header = () => {
               <Image
                 width={22}
                 height={42}
-                src={"/image/logo.png"}
+                src={"/image/light-logo1.png"}
                 alt=""></Image>
             </Flex>
             <Flex alignItems={"center"} justifyContent={"center"}>
-              <Typography fontSize={"25px"} color={colorPalette.blue[1]}>
+              <Typography fontSize={"25px"} color={colorPalette.gray[1]}>
                 {" "}
                 وب <strong>پویش</strong>{" "}
               </Typography>
@@ -87,7 +88,7 @@ const Header = () => {
             fontWeight={700}
             sx={{
               "&": {
-                color: colorPalette.blue[1],
+                color: colorPalette.gray[1],
                 transition: "color 0.3s ease",
                 "&:hover": {
                   color: colorPalette.turquoise[2],
@@ -112,13 +113,13 @@ const Header = () => {
             <CloudIcon />
           </Flex>{" "}
         </Button>
-        <Button variant="primary-outlined">ورود</Button>
+        <Button variant="secondary-outlined">ورود</Button>
       </Flex>
     </Flex>
   );
 };
 
-export default Header;
+export default DarkHeader;
 
 /**
  * styled-component

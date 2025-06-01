@@ -6,10 +6,14 @@ import { colorPalette } from './colorPalette';
 let theme = createTheme({
   typography: {
     fontFamily: 'var(--sans-font)',
-    h1: {
-      fontSize: '2.5rem', // 40px equivalent
-      fontWeight: 600,
+    h1: {mobile:{
+      fontSize: '4rem' , // 40px equivalent
+      fontWeight: 500,
     },
+  tablet:{
+      fontSize: '6rem' , // 40px equivalent
+      fontWeight: 700,
+  }},
     h2: {
       fontSize: '3rem', // 32px equivalent
       fontWeight: 500,
@@ -591,21 +595,22 @@ let theme = createTheme({
         {
           props: { variant: 'primary-outlined' },
           style: {
-            backgroundColor: colorPalette.turquoise[1],
+
+            backgroundColor: "transparent",
             color: colorPalette.blue[1],
             border: `0.5px solid ${colorPalette.blue[1]}`,
             '&:hover': {
-              backgroundColor: colorPalette.turquoise[1],
+              backgroundColor: "transparent",
               color: colorPalette.blue[1],
               border: `0.5px solid ${colorPalette.turquoise[2]}`,
             },
             '&:active': {
-              backgroundColor: colorPalette.turquoise[1],
+              backgroundColor: "transparent",
               color: colorPalette.blue[1],
               border: `0.5px solid ${colorPalette.turquoise[2]}`,
             },
             '&:focus': {
-              backgroundColor: colorPalette.turquoise[1],
+              backgroundColor: "transparent",
               color: colorPalette.blue[1],
               border: `0.5px solid ${colorPalette.turquoise[2]}`,
             },
@@ -616,36 +621,31 @@ let theme = createTheme({
             },
           },
         },
-        // {
-        //   props: { variant: 'secondary-outlined' },
-        //   style: {
-        //     borderRadius: '12px',
-        //     backgroundColor: colorPalette.gray[1],
-        //     color: colorPalette.pink[11],
-        //     border: `0.5px solid ${colorPalette.pink[9]}`,
-        //     '&:hover': {
-        //       backgroundColor: colorPalette.pink[3],
-        //       color: colorPalette.pink[11],
-        //       border: `0.5px solid ${colorPalette.pink[9]}`,
-        //     },
-        //     '&:active': {
-        //       backgroundColor: colorPalette.pink[3],
-        //       color: colorPalette.pink[11],
-        //       border: `0.5px solid ${colorPalette.pink[9]}`,
-        //       boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)',
-        //     },
-        //     '&:focus': {
-        //       backgroundColor: colorPalette.pink[3],
-        //       color: colorPalette.pink[11],
-        //       border: `0.5px solid ${colorPalette.pink[9]}`,
-        //       boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)',
-        //     },
-        //     '&:disabled': {
-        //       backgroundColor: colorPalette.gray[3],
-        //       color: colorPalette.gray[8],
-        //     },
-        //   },
-        // },
+        {
+          props: { variant: 'secondary-outlined' },
+          style: {
+            backgroundColor: "transparent",
+            color: colorPalette.gray[1],
+            border: `0.5px solid ${colorPalette.gray[1]}`,
+            '&:hover': {
+             
+              
+              border: `0.5px solid ${colorPalette.turquoise[2]}`,
+            },
+            '&:active': {
+              border: `0.5px solid ${colorPalette.turquoise[2]}`,
+
+            },
+            '&:focus': {
+                        border: `0.5px solid ${colorPalette.turquoise[2]}`,
+
+            },
+            '&:disabled': {
+              backgroundColor: colorPalette.gray[3],
+              color: colorPalette.gray[1],
+            },
+          },
+        },
         // {
         //   props: { variant: 'palnner' },
         //   style: {
