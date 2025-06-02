@@ -2,7 +2,6 @@ import { Flex } from "@/libs/primitives";
 import DarkCaseSection from "@/section/darkCaseSection";
 import HeroCasePage from "@/section/heroCasePage";
 import MidCasePage from "@/section/midCasePage";
-import { colorPalette } from "@/theme";
 
 export default function UseCase() {
   return (
