@@ -1,6 +1,5 @@
 
 import type { Metadata } from "next";
-import Header from "@/layout/Header";
 import Footer from "@/layout/Footer";
 
 import { sans } from "../src/theme/font.config";
