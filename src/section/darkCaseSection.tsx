@@ -1,5 +1,4 @@
 import { Button, Flex, Typography } from "@/libs/primitives";
-import { colorPalette } from "@/theme";
 import CloudIcon from "@mui/icons-material/Cloud";
 import Image from "next/image";
 
