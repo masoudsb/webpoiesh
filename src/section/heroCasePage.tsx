@@ -1,7 +1,5 @@
 import { Flex, Typography } from "@/libs/primitives";
 import { colorPalette } from "@/theme";
-import theme from "@/theme/custom-theme";
-import { ThemeProvider } from "@mui/material";
 
 export default function HeroCasePage() {
   return (
